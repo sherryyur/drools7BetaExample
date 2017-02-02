@@ -1,0 +1,20 @@
+<project-repositories>
+  <repositories>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>local</id>
+        <url>C:\Users\swang/.m2/repository</url>
+        <source>LOCAL</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>jboss-public</id>
+        <url>http://repository.jboss.org/nexus/content/groups/public</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+  </repositories>
+</project-repositories>

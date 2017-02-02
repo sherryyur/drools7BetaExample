@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sw.drools</groupId>
+    <artifactId>drool7BetaExample</artifactId>
+    <name>drool7BetaExample</name>
+
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <!-- =========================================================================================================== -->
+    <!-- SOURCE CODE MANAGEMENT                                                                                      -->
+    <!-- =========================================================================================================== -->
+    <scm>
+        <connection>scm:git:${git.repo.url}</connection>
+        <developerConnection>scm:git:${git.repo.url}</developerConnection>
+        <url>https://github.com/sherryyur/drools7BetaExample/tree/develop</url>
+    </scm>
+  <!--  <scm>
+      <connection>scm:git:https://github.com:sherryyur/drools7BetaExample.git</connection>
+      <developerConnection>scm:git:git@github.com:sherryyur/drools7BetaExample.git</developerConnection>
+      <url>https://github.com/sherryyur/drools7BetaExample.git</url>
+    </scm>-->
+    <!-- =========================================================================================================== -->
+    <!-- PROJECT PROPERTIES                                                                                          -->
+    <!-- =========================================================================================================== -->
+    <properties>
+        <git.repo.url>https://github.com/sherryyur/drools7BetaExample.git</git.repo.url>
+        <!-- Source file encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <kie-version>7.0.0.Beta6</kie-version>
+        <kie-maven-plugin-version>7.0.0.Beta6</kie-maven-plugin-version>
+    </properties>
+
+    <!-- =========================================================================================================== -->
+    <!-- PROJECT MODULES                                                                                             -->
+    <!-- =========================================================================================================== -->
+    <modules>
+        <module>cip-transactions</module>
+    </modules>
+
+    <!-- =========================================================================================================== -->
+    <!-- REPOSITORY CONFIGURATION                                                                                    -->
+    <!-- =========================================================================================================== -->
+    <repositories>
+        <repository>
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+
+    <!-- =========================================================================================================== -->
+    <!-- DEPENDENCY MANAGEMENT                                                                                       -->
+    <!-- =========================================================================================================== -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- maven plugin -->
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-plugin-api</artifactId>
+                <version>3.0</version>
+            </dependency>
+            <!-- maven plugin dependencies to annotations -->
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-annotations</artifactId>
+                <version>3.4</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kie.server</groupId>
+                <artifactId>kie-server-client</artifactId>
+                <version>${kie-version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- =========================================================================================================== -->
+    <!-- PROJECT BUILD CONFIGURATION                                                                                 -->
+    <!-- =========================================================================================================== -->
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <pluginManagement>
+            <plugins>
+                <!-- Maven Clean Plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>2.5</version>
+                </plugin>
+
+                <!-- Maven Dependency Plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.8</version>
+                </plugin>
+                <!-- Maven SCM Plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>1.9.1</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.kie</groupId>
+                    <artifactId>kie-maven-plugin</artifactId>
+                    <version>${kie-maven-plugin-version}</version>
+                    <extensions>true</extensions>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+
+    </build>
+
+</project>
