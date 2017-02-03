@@ -1036,6 +1036,14 @@
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
       <acceptedTypes>
         <entry>
+          <string>INSERT_ROW</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>INSERT_COLUMN</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>DELETE_COLUMN</string>
           <boolean>false</boolean>
         </entry>
@@ -1044,15 +1052,7 @@
           <boolean>false</boolean>
         </entry>
         <entry>
-          <string>INSERT_ROW</string>
-          <boolean>false</boolean>
-        </entry>
-        <entry>
           <string>DELETE_ROW</string>
-          <boolean>false</boolean>
-        </entry>
-        <entry>
-          <string>INSERT_COLUMN</string>
           <boolean>false</boolean>
         </entry>
       </acceptedTypes>
@@ -1074,6 +1074,7 @@
   </imports>
   <packageName>com.cip.transactions</packageName>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
+  <hitPolicy>NONE</hitPolicy>
   <data>
     <list>
       <value>
@@ -1103,7 +1104,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Creating</valueString>
+        <valueString>Editing</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
