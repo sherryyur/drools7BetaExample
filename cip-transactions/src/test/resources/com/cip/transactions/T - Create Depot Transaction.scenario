@@ -39,26 +39,8 @@
       <name>TransUI</name>
       <isModify>false</isModify>
     </fact-data>
-    <fact-data>
-      <type>ErrorMessage</type>
-      <fieldData/>
-      <name>errMsg</name>
-      <isModify>false</isModify>
-    </fact-data>
-    <fact-data>
-      <type>ClientData</type>
-      <fieldData>
-        <field-data>
-          <name>accountTypeCode</name>
-          <value>PV</value>
-          <nature>4</nature>
-        </field-data>
-      </fieldData>
-      <name>client</name>
-      <isModify>false</isModify>
-    </fact-data>
     <execution-trace>
-      <executionTimeResult>32</executionTimeResult>
+      <executionTimeResult>13</executionTimeResult>
       <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-rule>
@@ -93,7 +75,7 @@
       <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
-  <lastRunResult>2017-01-16 01:58:56.299 UTC</lastRunResult>
+  <lastRunResult>2017-02-08 03:52:06.13 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.cip.transactions</packageName>
