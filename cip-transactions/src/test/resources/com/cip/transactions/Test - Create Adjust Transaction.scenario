@@ -20,7 +20,7 @@
       <fieldData>
         <field-data>
           <name>code</name>
-          <value>MKTADJ</value>
+          <value>CLTADJ</value>
           <nature>4</nature>
         </field-data>
       </fieldData>
@@ -32,7 +32,7 @@
       <fieldData>
         <field-data>
           <name>action</name>
-          <value>Creating</value>
+          <value>Editing</value>
           <nature>4</nature>
         </field-data>
       </fieldData>
@@ -58,30 +58,7 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace>
-      <executionTimeResult>41</executionTimeResult>
-      <numberOfRulesFired>1</numberOfRulesFired>
-    </execution-trace>
-    <expect-rule>
-      <ruleName>Row 1 R - Create Market Adjustments</ruleName>
-      <explanation>Rule [Row 1 R - Create Market Adjustments] was activated 1 times.</explanation>
-      <expectedFire>true</expectedFire>
-      <successResult>true</successResult>
-      <actualResult>1</actualResult>
-    </expect-rule>
-    <fact-data>
-      <type>BusinessProcess</type>
-      <fieldData>
-        <field-data>
-          <name>code</name>
-          <value>CLTADJ</value>
-          <nature>4</nature>
-        </field-data>
-      </fieldData>
-      <name>Process</name>
-      <isModify>true</isModify>
-    </fact-data>
-    <execution-trace>
-      <executionTimeResult>1</executionTimeResult>
+      <executionTimeResult>55</executionTimeResult>
       <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-rule>
@@ -92,7 +69,7 @@
       <actualResult>1</actualResult>
     </expect-rule>
   </fixtures>
-  <lastRunResult>2017-01-13 00:49:57.42 UTC</lastRunResult>
+  <lastRunResult>2017-02-08 03:51:50.436 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.cip.transactions</packageName>
