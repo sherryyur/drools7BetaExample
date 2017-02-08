@@ -5,7 +5,6 @@ import org.drools.core.command.runtime.BatchExecutionCommandImpl;
 import org.kie.api.runtime.ExecutionResults;
 import org.kie.server.api.marshalling.MarshallingFormat;
 import org.kie.server.api.model.KieContainerResource;
-import org.kie.server.api.model.KieContainerStatus;
 import org.kie.server.api.model.ReleaseId;
 import org.kie.server.api.model.ServiceResponse;
 import org.kie.server.client.KieServicesClient;
@@ -22,6 +21,7 @@ import java.util.List;
 public class InvokeCreateTrnRule {
 
     private KieServicesClient kieServicesClient = null;
+    final String CONTAINERID = "ciptransactions";
 
     private KieServicesClient getKieServicesClient() {
         if (kieServicesClient == null) {
@@ -32,11 +32,10 @@ public class InvokeCreateTrnRule {
             configuration.setMarshallingFormat(MarshallingFormat.XSTREAM);
             kieServicesClient = KieServicesFactory.newKieServicesClient(configuration);
         }
-        final String containerID = "ciptransactions";
-        final ServiceResponse<KieContainerResource> containerInfo = kieServicesClient.getContainerInfo(containerID);
+        final ServiceResponse<KieContainerResource> containerInfo = kieServicesClient.getContainerInfo(CONTAINERID);
         if (containerInfo==null || containerInfo.getType() == ServiceResponse.ResponseType.FAILURE) {
-            final KieContainerResource kieContainerResource = new KieContainerResource(containerID, new ReleaseId("com.sw.drools", "cip-transactions", "1.0.0"));
-            kieServicesClient.createContainer(containerID, kieContainerResource);
+            final KieContainerResource kieContainerResource = new KieContainerResource(CONTAINERID, new ReleaseId("com.sw.drools", "cip-transactions", "1.0.0"));
+            kieServicesClient.createContainer(CONTAINERID, kieContainerResource);
         }
         return kieServicesClient;
     }
@@ -68,7 +67,7 @@ public class InvokeCreateTrnRule {
         org.drools.core.command.runtime.rule.FireAllRulesCommand fireAllRulesCommand = new org.drools.core.command.runtime.rule.FireAllRulesCommand();
         commands.add(fireAllRulesCommand);
         RuleServicesClient ruleClient = getKieServicesClient().getServicesClient(RuleServicesClient.class);
-        final ServiceResponse<ExecutionResults> executionResults = ruleClient.executeCommandsWithResults("ciptransactions", executionCommand);
+        final ServiceResponse<ExecutionResults> executionResults = ruleClient.executeCommandsWithResults(CONTAINERID, executionCommand);
         final TransactionUI ui = (TransactionUI)executionResults.getResult().getValue("UI");
         final boolean isRightRuleInvoked = ui.getTransTypeField() != null && ui.getTransTypeField().equals("Mandatory");
         System.out.println("\tIs CLTADJ invoked correctly? "+ isRightRuleInvoked );
