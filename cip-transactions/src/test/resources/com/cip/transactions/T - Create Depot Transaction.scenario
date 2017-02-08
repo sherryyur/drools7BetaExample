@@ -75,7 +75,7 @@
       <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
-  <lastRunResult>2017-02-08 03:49:44.166 UTC</lastRunResult>
+  <lastRunResult>2017-02-08 03:52:06.13 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.cip.transactions</packageName>
