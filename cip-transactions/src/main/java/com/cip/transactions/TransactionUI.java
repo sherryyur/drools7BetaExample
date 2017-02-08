@@ -757,4 +757,70 @@ public class TransactionUI implements java.io.Serializable {
         this.WitholdingTaxField = WitholdingTaxField;
     }
 
+    @Override
+    public String toString() {
+        return "TransactionUI{" +
+                "AccruedInterestField='" + AccruedInterestField + '\'' +
+                ", Action='" + Action + '\'' +
+                ", ApplicationMoneyField='" + ApplicationMoneyField + '\'' +
+                ", AssetField='" + AssetField + '\'' +
+                ", BaseFXRateField='" + BaseFXRateField + '\'' +
+                ", BrokerAllowed='" + BrokerAllowed + '\'' +
+                ", BrokerIDField='" + BrokerIDField + '\'' +
+                ", BrokerageField='" + BrokerageField + '\'' +
+                ", CanCreate=" + CanCreate +
+                ", CashEffectField='" + CashEffectField + '\'' +
+                ", CashFXRateField='" + CashFXRateField + '\'' +
+                ", ChangeReasonField='" + ChangeReasonField + '\'' +
+                ", ChargesField='" + ChargesField + '\'' +
+                ", CommentAllowed='" + CommentAllowed + '\'' +
+                ", CommentField='" + CommentField + '\'' +
+                ", CommissionField='" + CommissionField + '\'' +
+                ", ConsiderationField='" + ConsiderationField + '\'' +
+                ", CouponRateField='" + CouponRateField + '\'' +
+                ", CustodianField='" + CustodianField + '\'' +
+                ", DataProviderAllowed='" + DataProviderAllowed + '\'' +
+                ", DataProviderField='" + DataProviderField + '\'' +
+                ", DealerIDField='" + DealerIDField + '\'' +
+                ", DividendCurrencyField='" + DividendCurrencyField + '\'' +
+                ", DividendTypeField='" + DividendTypeField + '\'' +
+                ", EntitlementPositionField='" + EntitlementPositionField + '\'' +
+                ", ExtRef1Allowed='" + ExtRef1Allowed + '\'' +
+                ", ExtRef1Field='" + ExtRef1Field + '\'' +
+                ", ExtRef2Allowed='" + ExtRef2Allowed + '\'' +
+                ", ExtRef2Field='" + ExtRef2Field + '\'' +
+                ", FXRateField='" + FXRateField + '\'' +
+                ", FrankingCreditField='" + FrankingCreditField + '\'' +
+                ", FrankingCreditTypeField='" + FrankingCreditTypeField + '\'' +
+                ", HoldingTypeAllowed='" + HoldingTypeAllowed + '\'' +
+                ", HoldingTypeField='" + HoldingTypeField + '\'' +
+                ", IsEditable=" + IsEditable +
+                ", LotNoField='" + LotNoField + '\'' +
+                ", MaturityDateField='" + MaturityDateField + '\'' +
+                ", NominalField='" + NominalField + '\'' +
+                ", OpenCashField='" + OpenCashField + '\'' +
+                ", OpenStockField='" + OpenStockField + '\'' +
+                ", OrderIDField='" + OrderIDField + '\'' +
+                ", PaymentBasisField='" + PaymentBasisField + '\'' +
+                ", PriceAllowed=" + PriceAllowed +
+                ", PriceField='" + PriceField + '\'' +
+                ", RegistrationField='" + RegistrationField + '\'' +
+                ", RepoAmountField='" + RepoAmountField + '\'' +
+                ", RepoAssetField='" + RepoAssetField + '\'' +
+                ", RwtCustodianField='" + RwtCustodianField + '\'' +
+                ", RwtRegistryField='" + RwtRegistryField + '\'' +
+                ", SalesTaxField='" + SalesTaxField + '\'' +
+                ", SettleCcyAllowed='" + SettleCcyAllowed + '\'' +
+                ", SettleCurrencyAllowed='" + SettleCurrencyAllowed + '\'' +
+                ", SettleCurrencyField='" + SettleCurrencyField + '\'' +
+                ", SettleDateField='" + SettleDateField + '\'' +
+                ", StampDutyField='" + StampDutyField + '\'' +
+                ", TradeDateField='" + TradeDateField + '\'' +
+                ", TransStatusAllowed='" + TransStatusAllowed + '\'' +
+                ", TransStatusField='" + TransStatusField + '\'' +
+                ", TransTypeField='" + TransTypeField + '\'' +
+                ", TransTypesAllowed='" + TransTypesAllowed + '\'' +
+                ", WitholdingTaxField='" + WitholdingTaxField + '\'' +
+                '}';
+    }
 }
